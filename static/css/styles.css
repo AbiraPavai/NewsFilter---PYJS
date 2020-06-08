@@ -1,0 +1,12 @@
+body {
+
+          margin: 35px;
+      }
+
+#Table1{
+     margin:35px 50px 50px 50px;
+     padding-left: 60px;
+     text-align:center;
+     width:100%;
+     display:block;
+}

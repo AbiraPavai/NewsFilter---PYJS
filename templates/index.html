@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<select id="langsel" onchange="dynamicLoad()">
+    <option value="" selected="selected"> Choose Language </option>
+        {% for lang in content[0] %}
+             <option value="{{lang}}">{{lang}}</option>
+        {% endfor %}
+</select>
+
+
+
+<select id="regsel" onchange="loadAudioLinks()">
+    <option value="" selected="selected"> Choose Region </option>
+</select>
+
+<a id = "links"></a>
+<table id="Table1"></table>
+<audio id = "audioFile"></audio>
+
+<script>
+    var lang_reg =  JSON.parse('{{ content[1] | safe}}');
+</script>
+
+{% endblock %}
